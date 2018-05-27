@@ -1,91 +1,47 @@
-<html>
-  <head>
-    <title>Menghitung Zakat Penghasilan</title>
-    <meta charset="utf-8">
-    <script type = "text/javascript" src="BMIcalculator.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style>
-      .background-image{
-        background-image: url('https://trbbbbb.com/wp-content/uploads/data/2018/1/10/health-PIC-WSW3077863.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-      }
-      .container{
-        height: 100vh;
-      }
-      .form{
-        align-items: center;
-        margin: 200px 0 40px 0;
-        background-color: rgba(0, 0, 0, 0.5);;
-        color: #fff;
-        border-radius: 5%;
-      }
-      .input-group{
-        width: 100%;
-      }
-      input{
-        width: 100%;
-      }
-      button{
-        background-color: black;
-        margin: 30px 0;
-      }
-      .info{
-        text-align: center;
-        margin: 20px 0 40px 0;
-        background-color: rgba(0, 0, 0, 0.5);;
-        color: #fff;
-        border-radius: 5%;
-      }
-      .header-main{
-        background-color: rgba(0, 0, 0, 0.5);;
-      }
-      .by{
-        text-align: right;
-      }
-    </style>
+<!DOCTYPE HTML>
+<head>
+  <title>Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="calculator.js"></script>
   </head>
+<body>
+  <div class="subtitle">
+    <h5>Calculator</h5>
   <body>
-    <header id="main-header" class="header-main">
-      <div class="judul col-sm-6">
-        <h3>MENGITUNG ZAKAT PENGHASILAN</h3>
-      </div>
-      <div class="by col-sm-6">
-        <h6>By: Wahyudi Setiaji</h6>
-      </div>
-      <div class="clearfix"></div>
-    </header>
-    <div class="row background-image">
-      <div class="container">
-        <div id="box" class="box">
-          <div class="col-sm-4"></div>
-          <div class="form col-sm-4">
-              <div class="input-group">
-                <h5>Penghasilan</h5>
-                <input type="text" id="penghasilan" placeholder="hasil">
-              </div>
-              <div class="input-group">
-                <h5>Pengeluaran</h5>
-                <input type="text" id="pengeluaran" placeholder="keluar">
-              </div>
-              <div class="text-center">
-                <button type="button" name="calculate" onclick="calculate()">Hitung</button>
-              </div>
+      <div class="box">
+          <div class="display">
+              <input type="text" readonly size="18" id="d">
           </div>
-          <div class="col-sm-4"></div>
-          <div class="clearfix"></div>
-          <div class="col-sm-4"></div>
-          <div class="info col-sm-4">
-              <h5>Informasi</h5>
-              <p>*Pengeluaran per bulan adalah pengeluaran kebutuhan primer (sandang, pangan, papan) </p>
-              <p>* Pengeluaran perbulan termasuk : Pengeluaran diri , istri, 3 anak, orang tua dan cicilan rumah. Bila dia seorang istri, maka kebutuhan diri, 3 anak dan cicilan rumah tidak termasuk dalam pengeluaran perbulan. </p>
+          <div class="keys">
+              <p>
+                  <input type="button" class="button gray" value="mrc" onclick='c'><input type="button" class="button gray" value="m-" onclick='    c'><input type="button" class="button gray"
+                      value="m+" onclick='c'><input type="button" class="button pink" value="/" onclick='    v("/")'>
+              </p>
+              <p>
+                  <input type="button" class="button black" value="7" onclick='v("7")'><input type="button" class="button black" value="8" onclick='    v("8")'><input type="button" class="button black" value="9" onclick='    v("9")'><input
+                      type="button" class="button pink" value="*" onclick='v("*")'>
+              </p>
+              <p>
+                  <input type="button" class="button black" value="4" onclick='v("4")'><input type="button" class="button black" value="5" onclick='    v("5")'><input type="button" class="button black" value="6" onclick='    v("6")'><input
+                      type="button" class="button pink" value="-" onclick='v("-")'>
+              </p>
+              <p>
+                  <input type="button" class="button black" value="1" onclick='v("1")'><input type="button" class="button black" value="2" onclick='    v("2")'><input type="button" class="button black" value="3" onclick='    v("3")'><input
+                      type="button" class="button pink" value="+" onclick='v("+")'>
+              </p>
+              <p>
+                  <input type="button" class="button black" value="0" onclick='v("0")'><input type="button" class="button black" value="." onclick='    v(".")'><input type="button" class="button black" value="C" onclick='    c("")'><input
+                      type="button" class="button orange" value="=" onclick='e()'>
+              </p>
           </div>
-          <div class="col-sm-4"></div>
-        </div>
       </div>
-    </div>
   </body>
+</div>
+</body>
 </html>
